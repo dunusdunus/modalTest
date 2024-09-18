@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+}
+
+label,
+input {
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+form {
+    background-color: #FFFFFF;
+    width: 845px;
+    height: 935px;
+    border-radius: 20px;
+    -webkit-box-shadow: -1px 1px 8px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -1px 1px 8px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: -1px 1px 8px 2px rgba(34, 60, 80, 0.2);
+}
+
+.container {
+    max-width: 765px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.header {
+    color: #2D2929;
+}
+
+.header__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.header__text {
+    font-size: 16px;
+    font-weight: 410;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+.form {
+    margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+}
+
+.form__input {
+    padding: 16px 129px 15px 15px;
+    border: 1px solid rgba(40, 67, 203, 0.5);
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form__input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.75px;
+}
+
+.form__input:focus {
+    outline: 1px solid rgba(40, 67, 203, 0.5);
+}
+
+.form__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    margin-bottom: 5px;
+}
+
+.select {
+    display: flex;
+    gap: 30px;
+    padding-top: 25px;
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    padding-bottom: 25px;
+}
+
+.select__stamp {
+    position: relative;
+}
+
+.select__stamp::after {
+    content: url(/assets/images/stamp.svg);
+    position: absolute;
+    left: 15px;
+    top: 30px;
+}
+
+.select__stamp::before {
+    content: url('/assets/images/arrow.svg');
+    position: absolute;
+    top: 43%;
+    right: 21px;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.select__caption {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    margin-bottom: 5px;
+}
+
+.select__input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 16px 121px 15px 57px;
+    border: 1px solid rgba(40, 67, 203, 0.5);
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.75px;
+    cursor: pointer;
+}
+
+.select__input::-ms-expand {
+    display: none;
+}
+
+.select__input:focus {
+    outline: 1px solid rgba(40, 67, 203, 0.5);
+}
+
+.select__file {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 319px;
+}
+
+.select__file > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+}
+
+.select__file > label {
+    width: 160px;
+}
+
+.get-files {
+    color: #C92232;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    cursor: pointer;
+}
+
+.get-files::before {
+    content: url(/assets/images/attach.svg);
+    margin-right: 9px;
+}
+
+.select__get-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.stamp-type {
+    margin-top: 25px;
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    padding-bottom: 25px;
+}
+
+.swiper {
+    margin-top: 20px;
+}
+
+.swiper__caption {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.41px;
+}
+
+.swiper__price {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: rgba(201, 34, 51, 0.329);
+}
+
+.order {
+    margin-top: 25px;
+}
+
+.order__checkbox {
+    display: flex;
+    gap: 7px;
+}
+
+.order__checkbox > label {
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #C92232;
+    border-radius: 3px;
+    vertical-align: sub;
+    position: relative;
+}
+
+.real-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.real-checkbox:focus + .custom-checkbox {
+    outline: 1px solid #C92232;
+}
+
+.custom-checkbox::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../assets/images/checked.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.1s ease;
+}
+
+.real-checkbox:checked + .custom-checkbox::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.order__button {
+    display: flex;
+    gap: 33px;
+    margin-top: 25px;
+}
+
+.order__button-btn {
+    padding: 18px 66px;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    background-color: #C92232;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.order__button-btn:hover {
+    background-color: #bd2231;
+}
+
+.order__button-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    max-width: 320px;
+}
+
+.order__button-text > a:link {
+    color: #2843CB;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.visible {
+    display: none;
+}
+
+.button {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeModal {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	width: 24px;
+	height: 24px;
+	opacity: 0.2;
+	cursor: pointer;
+    transition: opacity ease 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.closeModal::before,
+.closeModal::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.closeModal::before {
+	transform: rotate(45deg);
+}
+
+.closeModal::after {
+	transform: rotate(-45deg);
+}
