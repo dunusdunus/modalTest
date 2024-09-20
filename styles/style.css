@@ -22,6 +22,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+.body-color {
+    background-color: #2D2929;
+}
+
 form {
     background-color: #FFFFFF;
     width: 845px;
@@ -100,19 +104,18 @@ form {
 }
 
 .select__stamp::after {
-    content: url(/assets/images/stamp.svg);
+    content: url('../assets/images/stamp.svg');
     position: absolute;
     left: 15px;
     top: 30px;
 }
 
 .select__stamp::before {
-    content: url('/assets/images/arrow.svg');
+    content: url('../assets/images/arrow.svg');
     position: absolute;
-    top: 43%;
+    top: 37px;
     right: 21px;
     pointer-events: none;
-    transition: all .3s ease;
 }
 
 .select__caption {
@@ -149,7 +152,7 @@ form {
 .select__file {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     max-width: 319px;
 }
 
@@ -163,26 +166,40 @@ form {
     width: 160px;
 }
 
-.get-files {
+.fileinput-wrapper {
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.input-file__button {
     color: #C92232;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
+    border: none;
+    background: none;
+}
+
+.input-file__button::before {
+    content: url('../assets/images/attach.svg');
+    margin-right: 9px;
+    pointer-events: none;
+}
+
+.remove-files-btn {
+    display: none;
+    border: 1px solid #C92232;
+    background: none;
+    color: #C92232;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
 }
 
-.get-files::before {
-    content: url(/assets/images/attach.svg);
-    margin-right: 9px;
-}
-
-.select__get-file {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+.remove-files-btn_add {
+    display: block;
 }
 
 .stamp-type {
@@ -243,10 +260,6 @@ form {
     opacity: 0;
     position: absolute;
     z-index: -1;
-}
-
-.real-checkbox:focus + .custom-checkbox {
-    outline: 1px solid #C92232;
 }
 
 .custom-checkbox::before {
@@ -311,7 +324,6 @@ form {
     transform: translate(-50%, -50%);
 }
 
-
 .visible {
     display: none;
 }
@@ -332,10 +344,10 @@ form {
 	opacity: 0.2;
 	cursor: pointer;
     transition: opacity ease 0.5s;
+}
 
-	&:hover {
-		opacity: 1;
-	}
+.closeModal:hover {
+    opacity: 1;
 }
 
 .closeModal::before,

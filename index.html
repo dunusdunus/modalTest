@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/jquery.fileinput.js"></script>
 </head>
 <body>
     <div class="button">
         <button class="order__button-btn">Заказать печать для ИП</button>
     </div>
+
     <form action="#" class="modal visible">
         <div class="closeModal"></div>
         <div class="container">
@@ -61,8 +64,8 @@
                         При желании добавить логотип, приложите 
                         к письму файлы в тех форматах что есть в наличии.
                     </p>
-                    <input type="file" class="select__get-file" id="file" multiple>
-                    <label for="file"><span class="get-files">Прикрепить файлы</span></label>
+                    <input name="upl" type="file" class="input-file input-file__button" id="control" multiple>
+                    <button class="remove-files-btn" id="clear">Удалить</button>
                 </div>
             </div>
     
@@ -78,25 +81,25 @@
     
                         <div class="swiper-slide">
                             <img src="assets/images/handle.png" class="swiper__img" alt="Ручная оснастка">
-                            <p class="swiper__caption">Ручная оснастка</p>
+                            <p class="swiper__caption">Ручная <br>оснастка</p>
                             <p class="swiper__price">600 ₽</p>
                         </div>
     
                         <div class="swiper-slide">
                             <img src="assets/images/half-automatic.png" class="swiper__img" alt="Полуавтоматическая оснастка">
-                            <p class="swiper__caption">Полуавтоматическая оснастка</p>
+                            <p class="swiper__caption">Полуавтоматическая <br>оснастка</p>
                             <p class="swiper__price">600 ₽</p>
                         </div>
     
                         <div class="swiper-slide">
                             <img src="assets/images/automatic.png" class="swiper__img" alt="Автоматическая оснастка">
-                            <p class="swiper__caption">Автоматическая оснастка</p>
+                            <p class="swiper__caption">Автоматическая <br>оснастка</p>
                             <p class="swiper__price">600 ₽</p>
                         </div>
     
                         <div class="swiper-slide">
                             <img src="assets/images/pocket.png" class="swiper__img" alt="Карманная оснастка">
-                            <p class="swiper__caption">Карманная оснастка</p>
+                            <p class="swiper__caption">Карманная <br>оснастка</p>
                             <p class="swiper__price">600 ₽</p>
                         </div>
                     </div>
@@ -115,12 +118,13 @@
                 <div class="order__button">
                     <button class="order__button-btn">Заказать печать для ИП</button>
                     <p class="order__button-text">Нажимая кнопку, вы соглашаетесь с 
-                        <a href="">политикой обработки персональных данных.</a>
+                        <a href="#">политикой обработки персональных данных.</a>
                     </p>
                 </div>
             </div>
         </div>
     </form>
+
     <script src="js/script.js"></script>
 </body>
 </html>
