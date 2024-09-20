@@ -1,3 +1,11 @@
+const control = document.querySelector("#control");
+const clearBtn = document.querySelector("#clear");
+
+const button = document.querySelector('.order__button-btn');
+const modal = document.querySelector('.modal');
+const body = document.querySelector('body');
+const closeModal = document.querySelector('.closeModal');
+
 // jquery swiper
 const swiper = new Swiper('.swiper', {
     loop: true,
@@ -8,34 +16,25 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-
 // jquery fileInput plugin
 $(function() {
     $(".input-file").fileinput('<button class="input-file__button">Прикрепить файл</button>');
 });
 
-let control = document.querySelector("#control");
-let clearBn = document.querySelector("#clear");
-
-
 // Добавление кнопки удаления при добавлении файлов
 control.addEventListener('change', function() {
-    clearBn.classList.add('remove-files-btn_add');
+    clearBtn.classList.add('remove-files-btn_add');
 })
 
 // Событие по клику на кнопку удалить
-clearBn.addEventListener('click', function(){
+clearBtn.addEventListener('click', function(e){
+    e.preventDefault;
     control.value = '';
-    clearBn.classList.remove('remove-files-btn_add');
+    clearBtn.classList.remove('remove-files-btn_add');
  });
 
+
 // кастомная модалка
-const button = document.querySelector('.order__button-btn');
-const modal = document.querySelector('.modal');
-const body = document.querySelector('body');
-
-const closeModal = document.querySelector('.closeModal');
-
 button.addEventListener('click', function() {
     modal.classList.toggle('visible');
     body.classList.add('body-color');

@@ -28,8 +28,7 @@ input::-webkit-inner-spin-button {
 
 form {
     background-color: #FFFFFF;
-    width: 845px;
-    height: 935px;
+    padding: 40px;
     border-radius: 20px;
     -webkit-box-shadow: -1px 1px 8px 2px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: -1px 1px 8px 2px rgba(34, 60, 80, 0.2);
@@ -39,7 +38,6 @@ form {
 .container {
     max-width: 765px;
     margin: 0 auto;
-    padding: 40px 0;
 }
 
 .header {
@@ -67,7 +65,9 @@ form {
 }
 
 .form__input {
-    padding: 16px 129px 15px 15px;
+    padding: 16px;
+    width: 320px;
+    height: 50px;
     border: 1px solid rgba(40, 67, 203, 0.5);
     outline: none;
     border-radius: 5px;
@@ -94,9 +94,8 @@ form {
 .select {
     display: flex;
     gap: 30px;
-    padding-top: 25px;
+    padding: 25px 0;
     border-bottom: 1px solid rgba(216, 216, 216, 1);
-    padding-bottom: 25px;
 }
 
 .select__stamp {
@@ -169,9 +168,12 @@ form {
 .fileinput-wrapper {
     max-width: 150px;
     cursor: pointer;
+    margin-top: 19px;
 }
 
 .input-file__button {
+    display: flex;
+    align-items: center;
     color: #C92232;
     font-size: 14px;
     font-weight: 400;
@@ -183,7 +185,6 @@ form {
 .input-file__button::before {
     content: url('../assets/images/attach.svg');
     margin-right: 9px;
-    pointer-events: none;
 }
 
 .remove-files-btn {
@@ -367,4 +368,27 @@ form {
 
 .closeModal::after {
 	transform: rotate(-45deg);
+}
+
+
+
+@media (max-width: 1440px) {
+    .header__title {
+        font-size: 35px;
+    }
+    .header__text {
+        font-size: 15px;
+    }
+    .form__input {
+        margin-bottom: 14px;
+    }
+    .form__input:last-child {
+        margin-bottom: 25px;
+    }
+    .select {
+        padding: 20px 0;
+    }
+    .fileinput-wrapper {
+        margin-top: 15px;
+    }
 }
