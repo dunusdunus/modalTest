@@ -9,7 +9,23 @@ const closeModal = document.querySelector('.closeModal');
 // jquery swiper
 const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 4,
+    breakpoints: {
+        1440: {
+            slidesPerView: 4,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        425: {
+            slidesPerView: 2,
+        },
+        320: {
+            slidesPerView: 2,
+        },
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
