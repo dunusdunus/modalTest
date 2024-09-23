@@ -202,7 +202,6 @@ form {
 .select__file {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     max-width: 319px;
 }
 
@@ -486,11 +485,14 @@ form {
         font-weight: 400;
         line-height: 16.75px;
     }
+    .select__wrapper {
+        width: 320px;
+    }
     .select__stamp::after {
-        top: 28px;
+        top: 31px;
     }
     .select__stamp::before {
-        top: 35px;
+        top: 37px;
     }
     .select__file > p {
         font-size: 13px;
@@ -569,9 +571,19 @@ form {
     .form__input {
         width: 280px;
     }
+    .select__wrapper {
+        width: 280px;
+    }
 }
 
 @media (max-width: 670px) {
+    .select__wrapper {
+        width: 300px;
+    }
+    .select__stamp::before {
+        top: 37px;
+        left: 263px;
+    }
     form {
         padding: 20px;
         height: 100%;
@@ -582,6 +594,7 @@ form {
     }
     .header__title {
         font-size: 25px;
+        width: 270px;
     }
     .header__text {
         font-size: 14px;
